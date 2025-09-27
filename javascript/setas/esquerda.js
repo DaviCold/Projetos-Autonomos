@@ -1,4 +1,4 @@
-import { answersValues, setIndexImg, getIndexImg, setIsAnimating, getIsAnimating} from "../index.js"
+import {answersValues, setIndexImg, getIndexImg, setIsAnimating, getIsAnimating} from "../index.js"
 
 async function leftArrow() {
     leftarrow.addEventListener("click", () => {
