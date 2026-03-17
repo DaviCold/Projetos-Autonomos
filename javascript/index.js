@@ -175,7 +175,6 @@ async function forStart() {
 
             Object.values(lines).forEach(group => group.forEach(linesq => {linesq.removeAttribute("style"), linesq.classList.remove("linesexit")}))
             Object.values(answers).forEach(answer => answer.removeAttribute("style"))
-            Object.values(answers).forEach(answer => answer.classList.remove("answerstypetwo"))
             Object.values(buttonq).forEach(group => group.forEach(button => { button.removeAttribute("style"), button.classList.remove("enter1", "enter2", "enter3", "enter4", "exit1", "exit2", "exit3", "exit4", "todesappear", "toappear", "buttonInvisible")}))
 
             setTimeout(() => {
