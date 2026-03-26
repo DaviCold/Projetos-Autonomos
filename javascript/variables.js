@@ -1,10 +1,12 @@
 /* Variáveis --> Modelo de Objeto de Documento (DOM) / Sem necessidade de funções de set/alterador, porque são variáveis estáticcas. */
 
-export { contquest, startpad, menu, contanswer, wrong, preventspan, arrow, congratulations, end, restart, lines, buttonq, answers, answers1, answers2, answers3, answers4, answers5, answers6, answers7, answers8, answers9, answers10}
+export { contquest, startpad, menu, padExposed, continuar, contanswer, wrong, preventspan, arrow, congratulations, end, restart, quests, lines, buttonq, answers, answers1, answers2, answers3, answers4, answers5, answers6, answers7, answers8, answers9, answers10};
 
 const contquest = document.querySelector("#contquest");
 const startpad = document.querySelector("#startpad");
 const menu = document.querySelector("#menu");
+const padExposed = document.querySelector("#padExposed");
+const continuar = document.querySelector("#continuar");
 const contanswer = document.querySelector("#contanswer");
 const wrong = document.querySelector("#imgwrong");
 const preventspan = document.querySelector("#preventspan");
@@ -12,6 +14,9 @@ const arrow = document.querySelector("#arrow");
 const congratulations = document.querySelector("#congratulations");
 const end = document.querySelector("#end");
 const restart = document.querySelector("#restart");
+
+const boxQuest = ["quest1", "quest2", "quest3", "quest4", "quest5", "quest6", "quest7", "quest8", "quest9", "quest10"];
+const quests = Object.fromEntries(boxQuest.map(quest => [quest, document.querySelector(`#${quest}`)]));
 
 const linesQuest = ["linesq1", "linesq2", "linesq3", "linesq4", "linesq5", "linesq6", "linesq7", "linesq8", "linesq9", "linesq10"];
 const lines = Object.fromEntries(linesQuest.map(line => [line, document.querySelectorAll(`.${line}`)]));
@@ -55,7 +60,7 @@ const answers10 = Object.fromEntries(answersq10.map(answerq10 => [answerq10, doc
 
 /* Variáveis --> Modelo de Objeto de Documento (DOM) / Necessidade de funções de set/alterador, porque são variáveis dinâmicas. */
 
-export {setIndexImg, indexImg, setIsAnimating, isAnimating, setAnswersValues, answersValues }
+export {setIndexImg, indexImg, setIsAnimating, isAnimating, setAnswersValues, answersValues };
 
 // O código abaixo exporta funções com valores e tem finalidade para dizer quando as caixas de respostas estão em animação e em qual das caixas estão (index). No final ele importa as funções das setas prontas.
 

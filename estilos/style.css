@@ -343,7 +343,7 @@ section {
             visibility: hidden;
             opacity: 0;
             position: absolute;
-            bottom: 100%;
+            bottom: 80%;
             left: 50%;
             transform: translateX(-50%);
             background: black;
@@ -424,26 +424,23 @@ section {
     font-size: 1em;
 
     & .line1q {
-        animation: lineAnimated 2s ease 0s;
-        animation-fill-mode: forwards;
+        animation: lineAnimated 2s ease 0s forwards;
     }
 
     & .line2q {
-        animation: lineAnimated 1.5s ease 0.5s;
-        animation-fill-mode: forwards;
+        animation: lineAnimated 1.5s ease 0.5s forwards;
     }
 
     & .line3q {
-        animation: lineAnimated 1.25s ease 0.75s;
-        animation-fill-mode: forwards;
+        animation: lineAnimated 1.25s ease 0.75s forwards;
     }
 
     & .line4q {
-        animation: lineAnimated 1s ease 1s;
-        animation-fill-mode: forwards;
+        animation: lineAnimated 1s ease 1s forwards;
     }
 
     & .quests {
+        display: none;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -464,13 +461,11 @@ section {
 }
 
 .contquestAppear {
-    animation: toAppear 3s ease;
-    animation-fill-mode: forwards;
+    animation: toAppear 3s ease forwards;
 }
 
 .contquestDesappear {
-    animation: toDesappear 2.7s ease;
-    animation-fill-mode: forwards;
+    animation: toDesappear 2.7s ease forwards;
 }
 
 #contanswer {
@@ -509,61 +504,48 @@ section {
     }
 
     & .exit1 {
-        display: block;
-        animation: buttonDesappear 2.7s ease, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: buttonDesappear 2.7s ease forwards, borderAnimated 5s linear infinite forwards;
     }
 
     & .exit2 {
-        display: block;
-        animation: buttonDesappear 2.4s ease 0.3s, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: buttonDesappear 2.4s ease 0.3s forwards, borderAnimated 5s linear infinite forwards;
     }
 
     & .exit3 {
-        display: block;
-        animation: buttonDesappear 2.1s ease 0.6s, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: buttonDesappear 2.1s ease 0.6s forwards, borderAnimated 5s linear infinite forwards;
     }
 
     & .exit4 {
-        display: block;
-        animation: buttonDesappear 1.8s ease 0.9s, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: buttonDesappear 1.8s ease 0.9s forwards, borderAnimated 5s linear infinite forwards;
     }
 
     & .enter1 {
-        display: block;
-        animation: enterAnimated 2.7s ease, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: enterAnimated 2.7s ease forwards, borderAnimated 5s linear infinite forwards;
     }
 
     & .enter2 {
-        display: block;
-        animation: enterAnimated 2.4s ease 0.3s, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: enterAnimated 2.4s ease 0.3s forwards, borderAnimated 5s linear infinite forwards;
+
     }
 
     & .enter3 {
-        display: block;
-        animation: enterAnimated 2.1s ease 0.6s, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: enterAnimated 2.1s ease 0.6s forwards, borderAnimated 5s linear infinite forwards;
+
     }
 
     & .enter4 {
-        display: block;
-        animation: enterAnimated 1.8s ease 0.9s, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: enterAnimated 1.8s ease 0.9s forwards, borderAnimated 5s linear infinite forwards;
+
     }
 
     & .toappear {
-        animation: toAppear 2.7s ease 1s, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: toAppear 2.7s ease 1s forwards, borderAnimated 5s linear infinite forwards;
+
     }
 
     & .todesappear {
-        animation: toDesappear 2.7s ease, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: toDesappear 2.7s ease forwards, borderAnimated 5s linear infinite forwards;
+
     }
 
     & .answers {
@@ -612,26 +594,22 @@ section {
 
         & .leftdisable {
             position: absolute;
-            animation: leftArrowExit 1.5s ease-in-out, borderAnimated 5s linear infinite;
-            animation-fill-mode: forwards;
+            animation: leftArrowExit 1.5s ease-in-out forwards, borderAnimated 5s linear infinite forwards;
         }
 
         & .leftactive {
             position: relative;
-            animation: leftArrowEnter 1.5s ease-in-out, borderAnimated 5s linear infinite;
-            animation-fill-mode: forwards;
+            animation: leftArrowEnter 1.5s ease-in-out forwards, borderAnimated 5s linear infinite forwards;
         }
 
         & .rightdisable {
             position: absolute;
-            animation: rightArrowExit 1.5s ease-in-out, borderAnimated 5s linear infinite;
-            animation-fill-mode: forwards;
+            animation: rightArrowExit 1.5s ease-in-out forwards, borderAnimated 5s linear infinite forwards;
         }
 
         & .rightactive {
             position: relative;
-            animation: rightArrowEnter 1.5s ease-in-out, borderAnimated 5s linear infinite;
-            animation-fill-mode: forwards;
+            animation: rightArrowEnter 1.5s ease-in-out forwards, borderAnimated 5s linear infinite forwards;
         }
     }
 
@@ -657,14 +635,12 @@ section {
 
     & .arrowAppear {
         display: flex; 
-        animation: toAppear 2.7s ease 1s; 
-        animation-fill-mode: forwards;
+        animation: toAppear 2.7s ease 1s forwards;
     }
 
     & .arrowDesappear {
         display: flex;
-        animation: toDesappear 2.7s ease; 
-        animation-fill-mode: forwards;
+        animation: toDesappear 2.7s ease forwards;
     }
 }
 
@@ -719,12 +695,10 @@ section {
     }
 
     & .toappear {
-        animation: toAppear 2.7s ease 1s, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: toAppear 2.7s ease 1s forwards, borderAnimated 5s linear infinite forwards;
     }
 
     & .todesappear {
-        animation: toDesappear 2.7s ease, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: toDesappear 2.7s ease forwards, borderAnimated 5s linear infinite forwards;
     }
 }
