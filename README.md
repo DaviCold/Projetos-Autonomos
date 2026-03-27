@@ -1,2 +1,2 @@
 # Projetos Autônomos
-- [Jogo de Perguntas: Jogar](./jogo_de_perguntas/index.html)
+- <a href="./jogo_de_perguntas/index.html" style="text-decoration: none;">Jogo de Perguntas: Jogar</a>
