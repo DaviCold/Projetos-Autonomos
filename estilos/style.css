@@ -289,23 +289,32 @@ section {
     text-align: center;
 }
 
-#startpad {
-    display: block;
+#menu {
+    display: flex;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 350px;
+    height: 50%;
+    min-height: 320px;
+}
+
+.pad {
+    display: block;
+    position: relative;
     width: 300px;
     height: 150px;
     background: conic-gradient(from var(--angle), #FFF3FE, #16003d, #16003D, #A755C2, #FFF3FE);
-    animation: borderAnimated  3s linear infinite;
+    animation: borderAnimated 3s linear infinite;
     border-radius: 50%;
     font-size: 2.5em;
     cursor: pointer;
 
     & #start {
         display: flex;
-        position: relative;
+        position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -315,6 +324,88 @@ section {
         border-radius: 50%;
         align-items: center;
         justify-content: center;
+    }
+    
+    & #feedback {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 285px;
+        height: 135px;
+        background: white;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+
+        & #mensFeedback {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            bottom: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: black;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            white-space: pre; /* permite quebra de linha */
+            transition: opacity 0.3s;
+
+            font: normal bold 35% Arial;
+        }
+    
+    }
+
+    & #feedback:hover #mensFeedback {
+    visibility: visible;
+    opacity: 1;
+    }
+}
+
+#padExposed {
+    display: none;
+    position: relative;
+    width: 70%;
+    height: 80%;
+    max-width: 600px;
+    max-height: 530px;
+    background: yellow;
+    border-radius: 20px;
+    background: conic-gradient(from var(--angle), #FFF3FE, #16003d, #16003D, #A755C2, #FFF3FE);
+    animation: borderAnimated 3s linear infinite;
+
+    & #exposed {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% - 15px);
+        height: calc(100% - 15px);
+        overflow: hidden;
+        overflow-y: auto;
+        border-radius: 15px;
+        background-color: white;
+        
+        & #explicativa {
+            padding: 20px;
+            text-align: justify;
+            text-indent: 40px;
+        }
+        
+        & #continuar {
+            position: sticky;
+            bottom: 0px;
+            width: 100%;
+            min-height: 2.5em;
+            background: rgb(0, 255, 0);
+            cursor: pointer;
+            line-height: 2.5em;
+        }
     }
 }
 
@@ -333,26 +424,23 @@ section {
     font-size: 1em;
 
     & .line1q {
-        animation: lineAnimated 2s ease 0s;
-        animation-fill-mode: forwards;
+        animation: lineAnimated 2s ease 0s forwards;
     }
 
     & .line2q {
-        animation: lineAnimated 1.5s ease 0.5s;
-        animation-fill-mode: forwards;
+        animation: lineAnimated 1.5s ease 0.5s forwards;
     }
 
     & .line3q {
-        animation: lineAnimated 1.25s ease 0.75s;
-        animation-fill-mode: forwards;
+        animation: lineAnimated 1.25s ease 0.75s forwards;
     }
 
     & .line4q {
-        animation: lineAnimated 1s ease 1s;
-        animation-fill-mode: forwards;
+        animation: lineAnimated 1s ease 1s forwards;
     }
 
     & .quests {
+        display: none;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -373,13 +461,11 @@ section {
 }
 
 .contquestAppear {
-    animation: toAppear 3s ease;
-    animation-fill-mode: forwards;
+    animation: toAppear 3s ease forwards;
 }
 
 .contquestDesappear {
-    animation: toDesappear 2.7s ease;
-    animation-fill-mode: forwards;
+    animation: toDesappear 2.7s ease forwards;
 }
 
 #contanswer {
@@ -418,61 +504,48 @@ section {
     }
 
     & .exit1 {
-        display: block;
-        animation: buttonDesappear 2.7s ease, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: buttonDesappear 2.7s ease forwards, borderAnimated 5s linear infinite forwards;
     }
 
     & .exit2 {
-        display: block;
-        animation: buttonDesappear 2.4s ease 0.3s, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: buttonDesappear 2.4s ease 0.3s forwards, borderAnimated 5s linear infinite forwards;
     }
 
     & .exit3 {
-        display: block;
-        animation: buttonDesappear 2.1s ease 0.6s, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: buttonDesappear 2.1s ease 0.6s forwards, borderAnimated 5s linear infinite forwards;
     }
 
     & .exit4 {
-        display: block;
-        animation: buttonDesappear 1.8s ease 0.9s, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: buttonDesappear 1.8s ease 0.9s forwards, borderAnimated 5s linear infinite forwards;
     }
 
     & .enter1 {
-        display: block;
-        animation: enterAnimated 2.7s ease, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: enterAnimated 2.7s ease forwards, borderAnimated 5s linear infinite forwards;
     }
 
     & .enter2 {
-        display: block;
-        animation: enterAnimated 2.4s ease 0.3s, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: enterAnimated 2.4s ease 0.3s forwards, borderAnimated 5s linear infinite forwards;
+
     }
 
     & .enter3 {
-        display: block;
-        animation: enterAnimated 2.1s ease 0.6s, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: enterAnimated 2.1s ease 0.6s forwards, borderAnimated 5s linear infinite forwards;
+
     }
 
     & .enter4 {
-        display: block;
-        animation: enterAnimated 1.8s ease 0.9s, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: enterAnimated 1.8s ease 0.9s forwards, borderAnimated 5s linear infinite forwards;
+
     }
 
     & .toappear {
-        animation: toAppear 2.7s ease 1s, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: toAppear 2.7s ease 1s forwards, borderAnimated 5s linear infinite forwards;
+
     }
 
     & .todesappear {
-        animation: toDesappear 2.7s ease, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: toDesappear 2.7s ease forwards, borderAnimated 5s linear infinite forwards;
+
     }
 
     & .answers {
@@ -521,26 +594,22 @@ section {
 
         & .leftdisable {
             position: absolute;
-            animation: leftArrowExit 1.5s ease-in-out, borderAnimated 5s linear infinite;
-            animation-fill-mode: forwards;
+            animation: leftArrowExit 1.5s ease-in-out forwards, borderAnimated 5s linear infinite forwards;
         }
 
         & .leftactive {
             position: relative;
-            animation: leftArrowEnter 1.5s ease-in-out, borderAnimated 5s linear infinite;
-            animation-fill-mode: forwards;
+            animation: leftArrowEnter 1.5s ease-in-out forwards, borderAnimated 5s linear infinite forwards;
         }
 
         & .rightdisable {
             position: absolute;
-            animation: rightArrowExit 1.5s ease-in-out, borderAnimated 5s linear infinite;
-            animation-fill-mode: forwards;
+            animation: rightArrowExit 1.5s ease-in-out forwards, borderAnimated 5s linear infinite forwards;
         }
 
         & .rightactive {
             position: relative;
-            animation: rightArrowEnter 1.5s ease-in-out, borderAnimated 5s linear infinite;
-            animation-fill-mode: forwards;
+            animation: rightArrowEnter 1.5s ease-in-out forwards, borderAnimated 5s linear infinite forwards;
         }
     }
 
@@ -566,14 +635,12 @@ section {
 
     & .arrowAppear {
         display: flex; 
-        animation: toAppear 2.7s ease 1s; 
-        animation-fill-mode: forwards;
+        animation: toAppear 2.7s ease 1s forwards;
     }
 
     & .arrowDesappear {
         display: flex;
-        animation: toDesappear 2.7s ease; 
-        animation-fill-mode: forwards;
+        animation: toDesappear 2.7s ease forwards;
     }
 }
 
@@ -628,12 +695,10 @@ section {
     }
 
     & .toappear {
-        animation: toAppear 2.7s ease 1s, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: toAppear 2.7s ease 1s forwards, borderAnimated 5s linear infinite forwards;
     }
 
     & .todesappear {
-        animation: toDesappear 2.7s ease, borderAnimated 5s linear infinite;
-        animation-fill-mode: forwards;
+        animation: toDesappear 2.7s ease forwards, borderAnimated 5s linear infinite forwards;
     }
 }
