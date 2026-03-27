@@ -1,2 +1,2 @@
 # Projetos Autônomos
-- [./jogo_de_perguntas/index.html](Jogo de Perguntas: Jogar)
+- [Jogo de Perguntas: Jogar](./jogo_de_perguntas/index.html)
