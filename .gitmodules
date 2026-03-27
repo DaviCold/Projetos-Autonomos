@@ -1,0 +1,4 @@
+[submodule "jogo_de_perguntas"]
+	path = jogo_de_perguntas
+	url = https://github.com/DaviCold/Projetos-Autonomos
+	branch = jogo_de_perguntas
