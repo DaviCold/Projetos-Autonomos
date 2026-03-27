@@ -12,7 +12,7 @@ function nextAskTypeOne(
 ) {
     return new Promise ( function (resolve) {
         continuar.addEventListener("click", function() {
-            padExposed.setAttribute("style", "animation: toDesappear 1.5s ease, borderAnimated 3s linear infinite forwards");
+            padExposed.setAttribute("style", "animation: toDesappear 1.5s ease forwards, borderAnimated 3s linear infinite forwards");
             preventspan.setAttribute("style", "display: block");
             
             setTimeout(function(){
@@ -57,7 +57,7 @@ function nextAskTypeTwo(
 ) {
     return new Promise ( function (resolve) {
         continuar.addEventListener("click", function() {
-            padExposed.setAttribute("style", "animation: toDesappear 1.5s ease, borderAnimated 3s linear infinite forwards");
+            padExposed.setAttribute("style", "animation: toDesappear 1.5s ease forwards, borderAnimated 3s linear infinite forwards");
             nextAnswers.classList.add("answerstypetwo");
             preventspan.setAttribute("style", "display: block");
             arrow.setAttribute("style", "display:flex");
